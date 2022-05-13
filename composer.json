@@ -1,0 +1,75 @@
+{
+    "name": "oddhill/drupal-starter-kit",
+    "description": "Starter kit when creating a new site based on Drupal 9.",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0"
+        }
+    },
+    "require": {
+        "composer/installers": "^1.0",
+        "drupal/core-composer-scaffold": "^9.0",
+        "drupal/core-project-message": "^9.0",
+        "drupal/core-recommended": "^9.0",
+        "oddhill/oddprofile": "^2.0",
+        "vlucas/phpdotenv": "^5.0"
+    },
+    "require-dev": {
+        "cweagans/composer-patches": "^1.7",
+        "drush/drush": "^10.0",
+        "drupal/coder": "^8.3"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "phpcs": "./vendor/bin/phpcs --standard=Drupal --extensions=php,module,theme --ignore=node_modules,build public/modules/custom",
+        "phpcbf": "./vendor/bin/phpcbf --standard=Drupal --extensions=php,module,theme --ignore=node_modules,build public/modules/custom"
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "public/"
+            }
+        },
+        "installer-paths": {
+            "public/core": [
+                "type:drupal-core"
+            ],
+            "public/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "public/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "public/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "public/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "public/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "public/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        }
+    }
+}

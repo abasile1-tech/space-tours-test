@@ -1,0 +1,10 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Main file for the Odd Baby theme.
+ */
+
+require_once __DIR__ . '/oddbaby.suggestions.inc';

@@ -1,0 +1,34 @@
+oddbaby.mobile:
+  label: Mobile
+  mediaQuery: 'all and (max-width: 599px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+oddbaby.tablet:
+  label: Tablet
+  mediaQuery: 'all and (min-width: 600px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+oddbaby.tablet_landscape:
+  label: Tablet (Landscape)
+  mediaQuery: 'all and (min-width: 900px)'
+  weight: 2
+  multipliers:
+    - 1x
+
+oddbaby.desktop:
+  label: Desktop
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 3
+  multipliers:
+    - 1x
+
+oddbaby.desktop_large:
+  label: Desktop (Large)
+  mediaQuery: 'all and (min-width: 1800px)'
+  weight: 4
+  multipliers:
+    - 1x

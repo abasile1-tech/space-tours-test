@@ -1,0 +1,20 @@
+# Ignore files
+.DS_Store
+
+# Ignore folders
+/.gitattributes
+/.idea
+/.vscode
+/drush/contrib
+/vendor
+/public/core
+/public/modules/contrib
+/public/themes/contrib
+/public/profiles/contrib
+
+# Ignore Drupal's file directory
+/public/sites/*/files
+
+# Ignore local environment settings
+.env
+/public/sites/*/settings.local.php

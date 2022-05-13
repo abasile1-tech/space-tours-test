@@ -1,0 +1,34 @@
+# Base CSS, Javascript and dependencies.
+global:
+  css:
+    theme:
+      build/css/main.css: { minified: true }
+      build/css/print.css: { media: print }
+  js:
+    build/js/main.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+# External font from google fonts.
+font.source-sans-pro:
+  remote: https://fonts.google.com/specimen/Source+Sans+Pro
+  license: Open Font License
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700:
+        { external: true, minified: true }
+
+# External icons from font awesome.
+icons.font-awesome:
+  remote: http://fontawesome.io/
+  license: Open Font License
+  css:
+    theme:
+      https://use.fontawesome.com/releases/v5.3.1/css/all.css:
+        external: true
+        minified: true
+        attributes:
+          crossorigin: anonymous
+          integrity: sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU
