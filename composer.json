@@ -35,6 +35,8 @@
         "drupal/scheduler": "^1.4",
         "drupal/simple_gmap": "^3.0",
         "drupal/token": "^1.10",
+        "drupal/video_embed_field": "^2.4",
+        "drupal/views_slideshow": "^4.8",
         "oddhill/oddprofile": "^2.0",
         "vlucas/phpdotenv": "^5.0"
     },

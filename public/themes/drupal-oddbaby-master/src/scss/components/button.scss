@@ -1,11 +1,13 @@
 @use '../variables/default';
 
-$button-primary-background-color: #282828;
+//$button-primary-background-color: #282828;
+$button-primary-background-color: #517dd5;
 $button-secondary-background-color: #eee;
 
 .button {
   display: inline-block;
-  width: 100%;
+  //width: 100%;
+  width: fit-content;
 }
 
 .button--block {

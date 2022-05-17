@@ -43,11 +43,33 @@
     {{ page.header }}
   {% endif %}
 
+  {% if page.sidebar_first %}
+    {{ page.sidebar_first }}
+  {% endif %}
+
+  {% if page.sidebar_second %}
+    {{ page.sidebar_second }}
+  {% endif %}
+
   <main class="site-content" role="main">
     {# link is in html.html.twig #}
     <a id="main-content" tabindex="-1"></a>
 
-    {{ page.content }}
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
   </main>
 
   {% if page.footer %}
