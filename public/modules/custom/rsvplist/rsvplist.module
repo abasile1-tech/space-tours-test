@@ -30,12 +30,10 @@ function rsvplist_form_node_form_alter(&$form, FormStateInterface $form_state, $
      * @var \Drupal\rsvplist\EnablerService $enabler
      */
     $enabler = \Drupal::service('rsvplist.enabler');
-    \Drupal::logger('my_module')->notice(strval($enabler->isEnabled($node)));
     $form['rsvplist']['rsvplist_enabled'] = array(
       '#type' => 'checkbox',
       '#title' => ('Collect RSVP e-mail addresses for this node.'),
-      //'#default-value' => $enabler->isEnabled($node),
-      '#default-value' => FALSE,
+      '#default-value' => $enabler->isEnabled($node),
     );
     foreach (array_keys($form['actions']) as $action) {
       if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]
@@ -59,13 +57,9 @@ function rsvplist_form_node_form_submit(array $form, FormStateInterface $form_st
   $enabler = \Drupal::service('rsvplist.enabler');
   $node = $form_state->getFormObject()->getEntity();
   if ($enabled = $form_state->getValue('rsvplist_enabled')) {
-    print_r("Enabled!!");
-    \Drupal::logger('my_module')->notice($enabled);
     $enabler->setEnabled($node);
   }
   else {
-    print_r("Disabled!!");
-    \Drupal::logger('my_module')->notice('Disabled');
     $enabler->delEnabled($node);
   }
 }

@@ -48,15 +48,6 @@
       $select->fields('re', array('nid'));
       $select->condition('nid', $node->id());
       $results = $select->execute();
-      // print_r('Checking to see if enabled: '. empty($results->fetchCol()));
-      // \Drupal::logger('my_module')->notice('Checking to see if enabled: '. empty($results->fetchCol()));
-      // if (empty($results->fetchCol()) == TRUE) {
-      //   return FALSE;
-      // }
-      // else {
-      //   \Drupal::logger('my_module')->notice(strval(!empty($results->fetchCol())));
-      //   return TRUE;
-      // }
       return !empty($results->fetchCol());
     }
     /**

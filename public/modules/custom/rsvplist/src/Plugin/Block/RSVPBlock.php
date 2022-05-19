@@ -30,11 +30,16 @@ use Drupal\Core\Access\AccessResult;
       /**
        * @var \Drupal\node\Entity\Node $node
        */
-      //$node = \Drupal::routeMatch()->getParameter('node');
-      //$nid = $node->nid->value;
-      $nid = \Drupal::routeMatch()->getRawParameter('node');
+      $node = \Drupal::routeMatch()->getParameter('node');
+      $nid = $node->nid->value;
+      /**
+       * @var \Drupal\rsvplist\EnablerService $enabler
+       */
+      $enabler = \Drupal::service('rsvplist.enabler');
       if(is_numeric($nid)){
-        return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
+        if ($enabler->isEnabled(($node))){
+          return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
+        }
       }
       return AccessResult::forbidden();
     }
