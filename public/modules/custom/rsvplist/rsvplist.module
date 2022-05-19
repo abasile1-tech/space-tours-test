@@ -5,7 +5,6 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Form\Interface;
 
 /**
  * Implements hook_form_alter().
@@ -33,7 +32,7 @@ function rsvplist_form_node_form_alter(&$form, FormStateInterface $form_state, $
     $form['rsvplist']['rsvplist_enabled'] = array(
       '#type' => 'checkbox',
       '#title' => ('Collect RSVP e-mail addresses for this node.'),
-      '#default-value' => $enabler->isEnabled($node),
+      '#default_value' => $enabler->isEnabled($node),
     );
     foreach (array_keys($form['actions']) as $action) {
       if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]

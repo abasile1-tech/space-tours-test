@@ -48,6 +48,7 @@
       $select->fields('re', array('nid'));
       $select->condition('nid', $node->id());
       $results = $select->execute();
+      //\Drupal::logger('my_module')->notice('Checking to see if enabled: '. !empty($results->fetchCol()));
       return !empty($results->fetchCol());
     }
     /**
