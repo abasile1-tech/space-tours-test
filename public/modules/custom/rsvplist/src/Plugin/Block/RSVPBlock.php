@@ -30,8 +30,9 @@ use Drupal\Core\Access\AccessResult;
       /**
        * @var \Drupal\node\Entity\Node $node
        */
-      $node = \Drupal::routeMatch()->getParameter('node');
-      $nid = $node->nid->value;
+      //$node = \Drupal::routeMatch()->getParameter('node');
+      //$nid = $node->nid->value;
+      $nid = \Drupal::routeMatch()->getRawParameter('node');
       if(is_numeric($nid)){
         return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
       }
