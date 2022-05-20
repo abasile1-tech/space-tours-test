@@ -7,7 +7,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 function loremipsum_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     case 'help.page.loremipsum':
-      return t('
+      return ('
         <h2>Lorem ipsum generator for Drupal.</h2>
         <h3>Instructions</hs>
         <p>Lorem ipsum dolor sit amet... <strong>Just kidding!</strong></p>
@@ -28,5 +28,38 @@ function loremipsum_help($route_name, RouteMatchInterface $route_match) {
         <p>Most bugs have been ironed out, holes covered, features added. But this
         module is a work in progress. Please report bugs and suggestions, ok</p>
       ');
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function loremipsum_theme($existing, $type, $theme, $path) {
+  $variables = [
+    'loremipsum' => [
+      'variables' => [
+        'source_text' => NULL,
+      ],
+      'template' => 'loremipsum',
+    ],
+  ];
+  return $variables;
+}
+
+/**
+ * Template preprocess function for Lorem ipsum.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - source_text
+ */
+function template_preprocess_loremipsum(&$variables) {
+  $punctuation = array('. ', '! ', '? ', '... ', ': ', '; ');
+  for ($i = 0; $i < count($variables['source_text']); $i++) {
+    $big_text = explode('. ', $variables['source_text'][$i]);
+    for ($j = 0; $j < count($big_text) - 1; $j++) {
+      $big_text[$j] .= $punctuation[floor(mt_rand(0, count($punctuation) - 1))];
+    }
+    $variables['source_text'][$i] = implode('', $big_text);
   }
 }

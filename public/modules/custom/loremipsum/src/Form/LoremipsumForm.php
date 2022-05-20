@@ -10,7 +10,7 @@ class LoremIpsumForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'loremipusm_form';
+    return 'loremipsum_form';
   }
   /**
    * {@inheritdoc}
