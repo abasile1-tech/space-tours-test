@@ -4,8 +4,8 @@ namespace Drupal\loremipsum\Controller;
 
 // Change following https://www.drupal.org/node/2457593
 // See https://www.drupal.org/node/2549395 for deprecate methods information
-use Drupal\Component\Utility\SafeMarkup;
-//use Drupal\Component\Utility\Html;
+//use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
 // use Html instead SAfeMarkup
 
 /**
@@ -48,10 +48,10 @@ class LoremIpsumController {
         $this_paragraph .= $repertory[$next_number] . ' ';
         $last_number = $next_number;
       }
-      $element['#source_text'][] = SafeMarkup::checkPlain($this_paragraph);
-      //$element['#source_text'][] = Html::escape($this_paragraph);
-      $element['#title'] = SafeMarkup::checkPlain($page_title);
-      //$element['#title'] = Html::escape($page_title);
+      //$element['#source_text'][] = SafeMarkup::checkPlain($this_paragraph);
+      $element['#source_text'][] = Html::escape($this_paragraph);
+      //$element['#title'] = SafeMarkup::checkPlain($page_title);
+      $element['#title'] = Html::escape($page_title);
 
       // Theme function.
       $element['#theme'] = 'loremipsum';

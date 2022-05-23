@@ -3,7 +3,7 @@ loremipsum.generate:
   defaults:
     _controller: '\Drupal\loremipsum\Controller\LoremIpsumController::generate'
   requirements:
-    _permisson: 'generate lorem ipsum'
+    _access: 'TRUE' 
 
 loremipsum.form:
   path: '/admin/config/development/loremipsum'
@@ -11,4 +11,4 @@ loremipsum.form:
     _form: '\Drupal\loremipsum\Form\LoremIpsumForm'
     _title: 'Lorem ipsum settings'
   requirements:
-    _permission: 'administer site configuration'
+    _access: 'TRUE' 
