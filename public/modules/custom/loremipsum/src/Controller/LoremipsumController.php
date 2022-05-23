@@ -48,9 +48,7 @@ class LoremIpsumController {
         $this_paragraph .= $repertory[$next_number] . ' ';
         $last_number = $next_number;
       }
-      //$element['#source_text'][] = SafeMarkup::checkPlain($this_paragraph);
       $element['#source_text'][] = Html::escape($this_paragraph);
-      //$element['#title'] = SafeMarkup::checkPlain($page_title);
       $element['#title'] = Html::escape($page_title);
 
       // Theme function.
