@@ -59,10 +59,11 @@ class LoremIpsumBlockForm extends FormBase {
     $phrases = $form_state->getValue('phrases');
     if (!is_numeric($phrases)) {
       $form_state->setErrorByName('phrases', $this->t('Please use a number.'));
+      return;
     }
 
     if (floor($phrases) != $phrases) {
-      $form_state->setErrorByName('phrases', $this->t('No decimals, plesase.'));
+      $form_state->setErrorByName('phrases', $this->t('No decimals, please.'));
     }
 
     if ($phrases < 1) {
