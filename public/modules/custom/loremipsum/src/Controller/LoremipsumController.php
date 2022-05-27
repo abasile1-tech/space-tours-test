@@ -17,7 +17,7 @@ class LoremIpsumController {
    * Constructs Lorem ipsum text with arguments.
    * This callback is mapped to the path
    * 'loremipsum/generate/{paragraphs}/{phrases}'.
-   * 
+   *
    * @param string $paragraphs
    *   The amount of paragraphs that need to be generated.
    * @param string $phrases

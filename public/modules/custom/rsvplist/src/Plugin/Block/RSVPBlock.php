@@ -31,7 +31,15 @@ use Drupal\Core\Access\AccessResult;
        * @var \Drupal\node\Entity\Node $node
        */
       $node = \Drupal::routeMatch()->getParameter('node');
-      $nid = $node->nid->value;
+      if ($node !== null) {
+        if ($node->nid !== null) {
+          $nid = $node->nid->value;
+        }
+        else {
+          return AccessResult::forbidden();
+        }
+      }
+      else {return AccessResult::forbidden();}
       /**
        * @var \Drupal\rsvplist\EnablerService $enabler
        */

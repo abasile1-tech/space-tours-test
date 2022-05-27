@@ -1,0 +1,5 @@
+name: Drupalup Fibonacci
+description: Generate Fibonacci sequences on the fly
+type: module
+package: Custom
+core_version_requirement: ^8.7.7 || ^9

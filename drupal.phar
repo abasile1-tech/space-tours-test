@@ -1,0 +1,3 @@
+
+Warning: readfile(https://drupalconsole.com/installer): Failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in Command line code on line 1

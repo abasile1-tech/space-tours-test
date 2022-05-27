@@ -1,0 +1,5 @@
+hello_world.description:
+  title: Hello World
+  description: Hello World Custom Module
+  route_name: hello_world.description
+  expanded: TRUE
