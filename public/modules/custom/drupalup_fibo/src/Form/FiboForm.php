@@ -34,7 +34,7 @@ class FiboForm extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
-    kint($this->fiboService);
+    //kint($this->fiboService);
     $form['fibo_numbers'] = [
       '#type' => 'textfield',
       '#title' => $this->t('How many Fibonacci numbers do you want to generate?'),
