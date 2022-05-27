@@ -1,0 +1,5 @@
+name: Drupal Up Controller with template
+description: Our nice module with controller and template
+type: module
+package: Custom
+core_version_requirement: ^8.7.7 || ^9
