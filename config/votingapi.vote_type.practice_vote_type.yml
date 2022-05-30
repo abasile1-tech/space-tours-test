@@ -1,0 +1,8 @@
+uuid: f2624ffa-6b1e-4872-a9ff-12f2b89de894
+langcode: en
+status: true
+dependencies: {  }
+id: practice_vote_type
+label: 'Practice Vote Type'
+value_type: percentage
+description: 'A practice vote type using percentages.'

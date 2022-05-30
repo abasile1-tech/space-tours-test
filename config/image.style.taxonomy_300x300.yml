@@ -1,0 +1,15 @@
+uuid: 269e4ef6-0acf-420c-be2e-7ce3e2fd414b
+langcode: en
+status: true
+dependencies: {  }
+name: taxonomy_300x300
+label: 'Taxonomy 300x300'
+effects:
+  70ba3482-1a57-4905-a8da-65e273c02c60:
+    uuid: 70ba3482-1a57-4905-a8da-65e273c02c60
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      upscale: false

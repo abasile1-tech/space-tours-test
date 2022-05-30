@@ -1,0 +1,21 @@
+uuid: b9c19bf1-fffa-43a1-a0fc-5ea21b0be28e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_destination_phone
+    - node.type.destination
+  module:
+    - telephone
+id: node.destination.field_destination_phone
+field_name: field_destination_phone
+entity_type: node
+bundle: destination
+label: 'Destination Phone'
+description: 'Type in the destination''s phone number'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

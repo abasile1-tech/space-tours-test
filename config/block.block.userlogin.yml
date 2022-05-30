@@ -1,0 +1,27 @@
+uuid: da0827f4-52e0-4a45-a557-fca9de31073a
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - bartik
+id: userlogin
+theme: bartik
+region: sidebar_second
+weight: -3
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: visible
+  provider: user
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

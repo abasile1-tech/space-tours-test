@@ -1,0 +1,8 @@
+uuid: 0b9acabb-cd0b-411c-92be-35df324d1fd0
+langcode: en
+status: true
+dependencies: {  }
+name: Rating
+vid: rating
+description: 'The site-builder''s rating system from 1 poor to 5 excellent'
+weight: 0

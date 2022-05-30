@@ -12,8 +12,6 @@ use Symfony\Component\HttpFoundation\Response;
  * templates/description.html.twig file.
  */
 class HelloWorldController {
-  use DescriptionTemplateTrait;
-
   /**
    * {@inheritdoc}
    */

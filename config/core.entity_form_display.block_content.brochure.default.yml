@@ -1,0 +1,49 @@
+uuid: 6abe165b-da38-47f0-9599-4a3a6ca709b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.brochure
+    - field.field.block_content.brochure.body
+    - field.field.block_content.brochure.field_hotel_brochure
+  module:
+    - file
+    - text
+id: block_content.brochure.default
+targetEntityType: block_content
+bundle: brochure
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_hotel_brochure:
+    type: file_generic
+    weight: 27
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

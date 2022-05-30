@@ -1,0 +1,22 @@
+uuid: 6a40ff22-10af-4697-bbce-0cccb2846ed4
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: climate
+label: Climate
+type: 'canonical_entities:taxonomy_term'
+pattern: 'climate/[term:name]'
+selection_criteria:
+  bc5333fe-cdb6-4612-b64c-1cf8957fb035:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: bc5333fe-cdb6-4612-b64c-1cf8957fb035
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      climate: climate
+selection_logic: and
+weight: -5
+relationships: {  }

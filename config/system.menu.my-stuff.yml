@@ -1,0 +1,8 @@
+uuid: bcc36e25-a032-44ef-a047-a3d57d9ec3a9
+langcode: en
+status: true
+dependencies: {  }
+id: my-stuff
+label: 'My Stuff'
+description: 'A menu for the user''s stuff'
+locked: false

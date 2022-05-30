@@ -1,0 +1,20 @@
+uuid: e9922155-97c8-47ce-b611-b7f320d0507e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+id: bartik_poweredbydrupal
+theme: bartik
+region: footer_fifth
+weight: -3
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: 74ffc737-40a3-4d8f-8c7a-483094776cb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_image
+field_name: field_image
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 024acc24-4242-465a-adcf-817c5f2da1e6
+    alt: 'Default Image'
+    title: 'This is the default image'
+    width: 408
+    height: 243
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

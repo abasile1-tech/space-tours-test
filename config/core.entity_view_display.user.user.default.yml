@@ -1,0 +1,22 @@
+uuid: cfa6ed06-9c14-46d9-a21f-391915e357f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_first_name
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  masquerade:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_first_name: true
+  langcode: true
+  member_for: true

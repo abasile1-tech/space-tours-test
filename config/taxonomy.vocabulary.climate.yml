@@ -1,0 +1,8 @@
+uuid: f9c22df8-54b5-4cc4-a961-02312d6c6bad
+langcode: en
+status: true
+dependencies: {  }
+name: Climate
+vid: climate
+description: 'The general classification of the destination''s environment.'
+weight: 0

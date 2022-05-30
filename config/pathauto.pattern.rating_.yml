@@ -1,0 +1,22 @@
+uuid: 2a70848c-27af-4f2e-88ee-5048494b7cf4
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: rating_
+label: 'Rating '
+type: 'canonical_entities:taxonomy_term'
+pattern: 'rating/[term:name]'
+selection_criteria:
+  fede21ce-5536-4746-803e-bbf9dff9847b:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: fede21ce-5536-4746-803e-bbf9dff9847b
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      rating: rating
+selection_logic: and
+weight: -5
+relationships: {  }

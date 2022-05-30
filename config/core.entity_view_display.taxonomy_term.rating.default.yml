@@ -1,0 +1,34 @@
+uuid: fda08ce2-3a45-4f51-903d-d85472ed459b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.rating.field_rating_picture
+    - image.style.thumbnail
+    - taxonomy.vocabulary.rating
+  module:
+    - image
+    - text
+id: taxonomy_term.rating.default
+targetEntityType: taxonomy_term
+bundle: rating
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_rating_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

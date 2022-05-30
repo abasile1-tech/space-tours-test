@@ -1,0 +1,8 @@
+uuid: a9a19e75-4c87-46a8-bf5b-7a7bb17ab4ed
+langcode: en
+status: true
+dependencies: {  }
+id: brochure
+label: Brochure
+revision: 0
+description: 'A destination marketing block for promotional activities.'

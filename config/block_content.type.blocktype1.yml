@@ -1,0 +1,8 @@
+uuid: a1b66052-b11f-4a46-aeff-245233d331a7
+langcode: en
+status: true
+dependencies: {  }
+id: blocktype1
+label: BlockType1
+revision: 0
+description: 'An attempt at a block type.'

@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: 18ba65a8-40e6-4950-823b-ba48497f64d3
+name: 'Space Tours'
+mail: john.basile@oddhill.se
+slogan: 'You''re in for an exciting adventure with Space Tours!'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

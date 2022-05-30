@@ -1,0 +1,29 @@
+uuid: 4c617ca9-bec0-444c-bcb9-44a8bd84ad13
+langcode: en
+status: true
+dependencies:
+  module:
+    - rsvplist
+    - user
+  theme:
+    - bartik
+id: rsvpblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: rsvp_block
+settings:
+  id: rsvp_block
+  label: 'RSVP Block'
+  label_display: visible
+  provider: rsvplist
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      editor: editor

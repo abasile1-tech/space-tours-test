@@ -1,0 +1,34 @@
+uuid: d20ef3e7-64b5-44ff-a51d-bb1ba97c0820
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.destination
+  module:
+    - node
+    - rsvplist
+    - system
+    - toolbar
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access rsvplist report'
+  - 'access toolbar'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer rsvplist'
+  - 'create destination content'
+  - 'delete any destination content'
+  - 'delete destination revisions'
+  - 'delete own destination content'
+  - 'edit any destination content'
+  - 'edit own destination content'
+  - 'revert destination revisions'
+  - 'view all revisions'
+  - 'view destination revisions'
+  - 'view own unpublished content'
+  - 'view rsvplist'

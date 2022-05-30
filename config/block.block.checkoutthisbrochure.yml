@@ -1,0 +1,30 @@
+uuid: deb94f4e-e1fa-4640-a43c-ac3ae034c6c2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:brochure:7d6c44ba-d7e6-4cb8-9679-50919f323d12'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: checkoutthisbrochure
+theme: bartik
+region: sidebar_first
+weight: -3
+provider: null
+plugin: 'block_content:7d6c44ba-d7e6-4cb8-9679-50919f323d12'
+settings:
+  id: 'block_content:7d6c44ba-d7e6-4cb8-9679-50919f323d12'
+  label: 'Check out this brochure '
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

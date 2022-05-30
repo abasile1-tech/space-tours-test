@@ -1,0 +1,10 @@
+uuid: 9da79891-ce9b-4b87-a9e9-03157dcf3a43
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user_form_
+label: 'User Form Mode'
+targetEntityType: user
+cache: true

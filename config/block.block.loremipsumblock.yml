@@ -1,0 +1,26 @@
+uuid: d7451f1e-1820-4e18-9717-810e0db653a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - loremipsum
+    - system
+  theme:
+    - bartik
+id: loremipsumblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: loremipsum_block
+settings:
+  id: loremipsum_block
+  label: 'Lorem ipsum block'
+  label_display: visible
+  provider: loremipsum
+  loremipsum_block_settings: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/lorem-ipsum\r\n/loremipsum/generate/*/*"

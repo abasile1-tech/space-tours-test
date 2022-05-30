@@ -1,0 +1,30 @@
+uuid: 888f47ed-7eda-425d-a8c4-6540c32171b1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:blocktype1:d20c37da-7762-4fc7-8d4f-19ae401b9558'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: welcometothespacetourstravelagencywebsite_2
+theme: bartik
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'block_content:d20c37da-7762-4fc7-8d4f-19ae401b9558'
+settings:
+  id: 'block_content:d20c37da-7762-4fc7-8d4f-19ae401b9558'
+  label: 'Welcome to the Space Tours travel agency website'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,25 @@
+uuid: 8c3f6f15-36ef-40c1-af55-34b9f7ab560f
+langcode: en
+status: true
+dependencies:
+  module:
+    - drupalup_block
+    - system
+  theme:
+    - bartik
+id: drupalupblock
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: drupalup_block
+settings:
+  id: drupalup_block
+  label: 'Random Quote on Page Refresh'
+  label_display: '0'
+  provider: drupalup_block
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
